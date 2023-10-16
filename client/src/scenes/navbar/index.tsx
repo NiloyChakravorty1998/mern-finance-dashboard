@@ -3,7 +3,6 @@ import PixIcon from '@mui/icons-material/Pix';
 import { useState } from 'react';
 import { useTheme, Typography, Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import { AdminPanelSettingsRounded } from "@mui/icons-material";
 type Props = {}
 
 const Navbar = (props: Props) => {
