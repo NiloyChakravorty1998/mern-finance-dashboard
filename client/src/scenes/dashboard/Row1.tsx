@@ -71,12 +71,12 @@ const Row1 = () => {
           >
             <defs>
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor={palette.primary[300]} stopOpacity={0.5} />
-                <stop offset="95%" stopColor={palette.primary[300]} stopOpacity={0} />
+                <stop offset="5%" stopColor={palette.primary[300].toString()} stopOpacity={0.5} />
+                <stop offset="95%" stopColor={palette.primary[300].toString()} stopOpacity={0} />
               </linearGradient>
               <linearGradient id="colorExpenses" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor={palette.primary[300]} stopOpacity={0.5} />
-                <stop offset="95%" stopColor={palette.primary[300]} stopOpacity={0} />
+                <stop offset="5%" stopColor={palette.primary[300].toString()} stopOpacity={0.5} />
+                <stop offset="95%" stopColor={palette.primary[300].toString()} stopOpacity={0} />
               </linearGradient>
             </defs>
             <XAxis dataKey="name" tickLine={false} style={{ fontSize: "10px" }} />
@@ -92,7 +92,7 @@ const Row1 = () => {
 
       <DashboardBox gridArea="b">
       <BoxHeader title={"Profit and Revenue"}
-          subtitle={"top line represents revenue, bottom line represents expenses"}
+          subtitle={"top line represents revenue, bottom line represents profit"}
           sideText={"+4%"}></BoxHeader>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
@@ -112,7 +112,7 @@ const Row1 = () => {
              tickLine={false} style={{ fontSize: "10px" }} />
             <Tooltip />
             <Legend height={20} wrapperStyle={{margin:'0 0 10px 0'}}/>
-            <Line yAxisId='left' type='monotone' dataKey='profit' stroke={palette.tertiary[500]} />
+            <Line yAxisId='left' type='monotone' dataKey='profit' stroke={palette.tertiary[500].toString()} />
             <Line yAxisId='right' type='monotone' dataKey='revenue' stroke={palette.primary.main} />
           </LineChart>
         </ResponsiveContainer>
@@ -135,8 +135,8 @@ const Row1 = () => {
           }}
         ><defs>
           <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor={palette.primary[300]} stopOpacity={0.8} />
-                <stop offset="95%" stopColor={palette.primary[300]} stopOpacity={0} />
+                <stop offset="5%" stopColor={palette.primary[300].toString()} stopOpacity={0.8} />
+                <stop offset="95%" stopColor={palette.primary[300].toString()} stopOpacity={0} />
               </linearGradient>
           </defs>    
           <CartesianGrid vertical={false} stroke={palette.grey[800]} />
